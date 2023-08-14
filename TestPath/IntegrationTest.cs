@@ -1,6 +1,6 @@
-namespace TestPath
+﻿namespace TestPath
 {
-    public class UnitTest1
+    public class IntegrationTest
     {
         [Fact]
         public void Test1()
