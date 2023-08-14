@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPattern", "DesignPattern.csproj", "{DB27F658-6E43-4975-B5F9-05AD9AB8EE11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecialDP", "..\SpecialDP\SpecialDP.csproj", "{ABF71F26-8F68-45B1-9535-4AEAF914AFC5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB27F658-6E43-4975-B5F9-05AD9AB8EE11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB27F658-6E43-4975-B5F9-05AD9AB8EE11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB27F658-6E43-4975-B5F9-05AD9AB8EE11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB27F658-6E43-4975-B5F9-05AD9AB8EE11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABF71F26-8F68-45B1-9535-4AEAF914AFC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABF71F26-8F68-45B1-9535-4AEAF914AFC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABF71F26-8F68-45B1-9535-4AEAF914AFC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABF71F26-8F68-45B1-9535-4AEAF914AFC5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {77F0F8DF-65C6-44F0-914A-C0B5982919BA}
+	EndGlobalSection
+EndGlobal
