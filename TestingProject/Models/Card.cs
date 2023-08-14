@@ -2,11 +2,11 @@
 {
     public class Card
     {
-        public string Id { get; set; }
-        public int Stars { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public string Type { get; set; }
-        public int Price { get; set; }
+        public required string Id { get; set; }
+        public required int Stars { get; set; }
+        public required string Name { get; set; }
+        public required string Description { get; set; }
+        public required string Type { get; set; }
+        public required int Price { get; set; }
     }
 }

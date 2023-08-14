@@ -15,7 +15,7 @@ namespace TestingProject.Controllers
 
         public CardController(ILogger<CardController> logger)
         {
-            cardRepository = new CardRepository();
+            this.cardRepository = new CardRepository();
             _logger = logger;
         }
         // GET: api/<CardController>
