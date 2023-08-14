@@ -19,14 +19,16 @@ namespace TestPath
             Assert.Equal(5, card.Count());
         }
 
-        [Fact]
-        public void GetCard_ReturnTrueCard_UnitTest()
+        [InlineData(1)]
+        [InlineData(2)]
+        [Theory]
+        public void GetCard_ReturnTrueCard_UnitTest(int i)
         {
             //Arrange
             CardRepository repository = new CardRepository();
             var expectResult = new Card { Id = "2", Name = "Card 2", Stars = 2, Description = "This is Card Number.2", Type = "Normal", Price = 200 };
             //Act
-            var card = repository.GetCardById("2");
+            var card = repository.GetCardById($"{i}");
             //Assert
             Assert.NotNull(card);
             Assert.Equal(expectResult.Name, card.Name);
