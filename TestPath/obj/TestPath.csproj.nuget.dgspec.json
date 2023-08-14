@@ -148,6 +148,14 @@
               "target": "Package",
               "version": "[6.11.0, )"
             },
+            "Microsoft.AspNetCore.Mvc.Testing": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.AspNetCore.TestHost": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.10, )"
@@ -161,10 +169,6 @@
               "version": "[7.0.10, )"
             },
             "Microsoft.NET.Test.Sdk": {
-              "target": "Package",
-              "version": "[17.7.0, )"
-            },
-            "Microsoft.TestPlatform.TestHost": {
               "target": "Package",
               "version": "[17.7.0, )"
             },

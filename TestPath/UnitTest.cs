@@ -8,7 +8,7 @@ namespace TestPath
     public class UnitTest
     {
         [Fact]
-        public void TestGetCard_ReturnAllCard()
+        public void GetCard_ReturnAllCard_UnitTest()
         {
             //Arrange
             CardRepository repository = new CardRepository();
@@ -20,7 +20,7 @@ namespace TestPath
         }
 
         [Fact]
-        public void TestGetCard_ReturnTrueCard()
+        public void GetCard_ReturnTrueCard_UnitTest()
         {
             //Arrange
             CardRepository repository = new CardRepository();
@@ -36,7 +36,7 @@ namespace TestPath
         }
 
         [Fact]
-        public void TestGetCard_ReturnTrueMockCard()
+        public void GetCard_ReturnTrueMockCard_UnitTest()
         {
             //Arrange
             var card = new Card { Id = "2", Name = "Card 2", Stars = 2, Description = "This is Card Number.2", Type = "Normal", Price = 200 };
@@ -45,20 +45,21 @@ namespace TestPath
             //Act
             var expectResult = cardRepositoryMock.Object.GetCardById("2");
             //Assert
+            Assert.NotNull(expectResult);
             Assert.Equal(expectResult.Name, card.Name);
             Assert.Equal(expectResult.Stars, card.Stars);
             Assert.Equal(expectResult.Price, card.Price);
         }
 
         [Fact]
-        public void TestGetCard_ReturnAllCardWithFluentAssertion()
+        public void GetCard_ReturnAllCardWithFluentAssertion_UnitTest()
         {
             //Arrange
             CardRepository repository = new CardRepository();
             //Act
             var card = repository.GetCards();
             //Assert
-            card.Count().Should().Be(5);
+            card.Should().NotBeNull().And.HaveCount(5);
         }
     }
 }
