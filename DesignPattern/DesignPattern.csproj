@@ -13,7 +13,6 @@
     <Folder Include="Behavioral\Mediator\" />
     <Folder Include="Behavioral\Strategy\" />
     <Folder Include="Behavioral\Oserver\" />
-    <Folder Include="Structural\Bridge\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -39,3 +39,10 @@
 //Facade.GetInstance().DefendAirSpace();
 //-------
 //Bridge
+using DesignPattern.Structural.Bridge;
+using DesignPattern.Structural.Bridge.Interface;
+
+Developer fe = new FEDev(new FEJob());
+fe.WillWorkWith();
+Developer be = new BEDev(new BEJob());
+be.WillWorkWith();
