@@ -2,5 +2,6 @@
 {
     public interface ITarget
     {
+        Task GetDataForNote(string url);
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Pv1us27DPtwn+FKb+xSjj1EbPkEVUHYqVqAA7+KTaRdLUIU6oFMko1OIFAX2UFiwz01HDTQBylu/Ghsm4IgxxQ==",
+  "dgSpecHash": "56rxkO/tAkidoIUBlbxECkJejF8RgSEhhsPC/9LL0Kx6g4qZqCjQxEcVAd142hMpbsluJjaQ7g7L0FEMNbf43g==",
   "success": true,
   "projectFilePath": "D:\\Project\\NET_Practice\\SpecialDP\\SpecialDP.csproj",
   "expectedPackageFiles": [
@@ -46,6 +46,7 @@
     "C:\\Users\\hoang\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\hoang\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\hoang\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\hoang\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\hoang\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\hoang\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\hoang\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

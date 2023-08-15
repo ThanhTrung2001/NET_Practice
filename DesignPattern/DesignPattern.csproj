@@ -13,9 +13,11 @@
     <Folder Include="Behavioral\Mediator\" />
     <Folder Include="Behavioral\Strategy\" />
     <Folder Include="Behavioral\Oserver\" />
-    <Folder Include="Structural\Decorator\" />
-    <Folder Include="Structural\Facade\" />
     <Folder Include="Structural\Bridge\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
 </Project>

@@ -12,3 +12,6 @@ D:\Project\NET_Practice\DesignPattern\obj\Debug\net7.0\refint\DesignPattern.dll
 D:\Project\NET_Practice\DesignPattern\obj\Debug\net7.0\DesignPattern.pdb
 D:\Project\NET_Practice\DesignPattern\obj\Debug\net7.0\DesignPattern.genruntimeconfig.cache
 D:\Project\NET_Practice\DesignPattern\obj\Debug\net7.0\ref\DesignPattern.dll
+D:\Project\NET_Practice\DesignPattern\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\Project\NET_Practice\DesignPattern\obj\Debug\net7.0\DesignPattern.csproj.AssemblyReference.cache
+D:\Project\NET_Practice\DesignPattern\obj\Debug\net7.0\DesignPattern.csproj.CopyComplete
