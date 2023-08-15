@@ -5,6 +5,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <LangVersion>preview</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,10 +13,6 @@
     <Folder Include="Behavioral\Mediator\" />
     <Folder Include="Behavioral\Strategy\" />
     <Folder Include="Behavioral\Oserver\" />
-    <Folder Include="Creational\Factory\" />
-    <Folder Include="Creational\Builder\" />
-    <Folder Include="Creational\DI\" />
-    <Folder Include="Structural\Adapter\" />
     <Folder Include="Structural\Decorator\" />
     <Folder Include="Structural\Facade\" />
     <Folder Include="Structural\Bridge\" />
