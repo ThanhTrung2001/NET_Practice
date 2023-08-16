@@ -22,12 +22,15 @@ namespace DesignPattern.Behavioral.Mediator
             {
                 case "Red":
                     Console.WriteLine("Stop moving, waiting for green color!");
+                    Console.WriteLine("5...4...3...2...1...");
                     break;
                 case "Yellow":
                     Console.WriteLine("Moving slow, almost stop when red turn on!");
+                    Console.WriteLine("3...2...1...");
                     break;
                 case "Green":
                     Console.WriteLine("Moving like normal!");
+                    Console.WriteLine("6...5...4...3...2...1...");
                     break;
             }
         }

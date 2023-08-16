@@ -84,17 +84,20 @@
 //gitInvoker.Pull();
 //gitInvoker.Push();
 //-------
-////Mediator
-//using DesignPattern.Behavioral.Mediator;
+//Mediator
+using DesignPattern.Behavioral.Mediator;
 
-//Red redLight = new Red();
-//Yellow yellowLight = new Yellow();
-//Green greenLight = new Green();
+Red redLight = new Red();
+Yellow yellowLight = new Yellow();
+Green greenLight = new Green();
 
-//var trafficLight = new Mediator(redLight, yellowLight, greenLight);
-//redLight.TurnOn();
-//greenLight.TurnOn();
-//yellowLight.TurnOn();
-//redLight.TurnOn();
+var trafficLight = new Mediator(redLight, yellowLight, greenLight);
+
+redLight.Switch();
+
+greenLight.Switch();
+
+yellowLight.Switch();
+
 
 

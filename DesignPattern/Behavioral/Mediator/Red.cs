@@ -8,9 +8,10 @@ namespace DesignPattern.Behavioral.Mediator
         {
             this.mediator.Notify("Red");
         }
-        public void TurnOff()
+        public void Switch()
         {
 
+            this.mediator.Notify("Green");
         }
     }
 }

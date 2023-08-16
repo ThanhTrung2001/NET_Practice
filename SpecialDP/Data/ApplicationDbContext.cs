@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SpecialDP.Models;
 
 namespace SpecialDP.Data
 {
@@ -8,5 +9,6 @@ namespace SpecialDP.Data
         {
 
         }
+        public DbSet<Card> Cards { get; set; }
     }
 }
