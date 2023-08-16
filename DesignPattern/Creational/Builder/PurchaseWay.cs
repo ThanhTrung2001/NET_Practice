@@ -5,7 +5,7 @@ namespace DesignPattern.Creational.Builder
 {
     public class PurchaseWay  //Product
     {
-        public List<IPurchase> purchaseWays = [];
+        private List<IPurchase> purchaseWays = [];
         private static PurchaseWay? Instance;
         public PurchaseWay() { }
         public static PurchaseWay GetInstance()

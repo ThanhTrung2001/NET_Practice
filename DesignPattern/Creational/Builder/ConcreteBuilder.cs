@@ -21,7 +21,7 @@ namespace DesignPattern.Creational.Builder
         public List<IPurchase> GetList()
         {
             var list = PurchaseWay.GetInstance();
-            foreach (var item in list.purchaseWays)
+            foreach (var item in list.GetPurchaseWays())
             {
 
                 Console.WriteLine(item);

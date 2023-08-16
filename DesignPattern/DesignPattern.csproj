@@ -9,13 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Behavioral\Command\" />
-    <Folder Include="Behavioral\Mediator\" />
-    <Folder Include="Behavioral\Strategy\" />
-    <Folder Include="Behavioral\Oserver\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
