@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "BM8+I861Cg8/FjIHUJpOryuOcYaK0FP4mBORfZt3vs/P5aSDy5D4LZ91osUMDOcFNbphC7KXXqGEkvoj8KfvSA==",
+  "dgSpecHash": "ShdhB+RvQ4t7ULpFOswXk6Queq8dZZEY/gQ8ZaL4ptllbOMVb0koPshd66siwBLvqNBZassZqK8tXaY/eZHMyw==",
   "success": true,
   "projectFilePath": "D:\\Project\\NET_Practice\\SpecialDP\\SpecialDP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hoang\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\hoang\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\hoang\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\hoang\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
+    "C:\\Users\\hoang\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\hoang\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.10\\microsoft.aspnetcore.openapi.7.0.10.nupkg.sha512",
     "C:\\Users\\hoang\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\hoang\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

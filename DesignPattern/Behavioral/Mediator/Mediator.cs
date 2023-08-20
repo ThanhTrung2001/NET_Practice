@@ -25,7 +25,7 @@ namespace DesignPattern.Behavioral.Mediator
                     Console.WriteLine("5...4...3...2...1...");
                     break;
                 case "Yellow":
-                    Console.WriteLine("Moving slow, almost stop when red turn on!");
+                    Console.WriteLine("Moving slow, stop when red turn on!");
                     Console.WriteLine("3...2...1...");
                     break;
                 case "Green":
