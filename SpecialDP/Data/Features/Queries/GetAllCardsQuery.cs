@@ -1,5 +1,4 @@
 ﻿using MediatR;
-using SpecialDP.Data.UnitOfWork;
 using SpecialDP.Models;
 
 namespace SpecialDP.Data.Features.Queries
@@ -9,17 +8,18 @@ namespace SpecialDP.Data.Features.Queries
         public class GetAllCardsQueryHandler : IRequestHandler<GetAllCardsQuery, IEnumerable<Card>>
         {
 
-            private readonly IUnitOfWork unitOfWork;
+            private readonly ApplicationDbContext context;
 
-            public GetAllCardsQueryHandler(IUnitOfWork unitOfWork)
+            public GetAllCardsQueryHandler(ApplicationDbContext context)
             {
-                this.unitOfWork = unitOfWork;
+                this.context = context;
             }
 
-            public Task<IEnumerable<Card>> Handle(GetAllCardsQuery request, CancellationToken cancellationToken)
+            public async Task<IEnumerable<Card>> Handle(GetAllCardsQuery request, CancellationToken cancellationToken)
             {
 
-                return Task.FromResult(this.unitOfWork.GetCardRepository().GetAll());
+                var result = this.context.Set<Card>().ToList();
+                return result;
             }
         }
     }
