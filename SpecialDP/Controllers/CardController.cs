@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using SpecialDP.Data.Features.Commands;
 using SpecialDP.Data.Features.Queries;
 using SpecialDP.Data.UnitOfWork;
 using SpecialDP.Models;
@@ -39,35 +40,40 @@ namespace SpecialDP.Controllers
 
         // GET api/<CardController>/5
         [HttpGet("{id}")]
-        public Card Get(int id)
+        //public Card Get(int id)
+        public async Task<Card> Get(int id)
         {
             //return this.cardRepository.GetById(id.ToString());
-            return unitOfWork.GetCardRepository().GetById(id.ToString());
+            //return unitOfWork.GetCardRepository().GetById(id.ToString());
+            return await mediator.Send(new GetCardByIdQuery { Id = id.ToString() });
         }
 
         // POST api/<CardController>
         [HttpPost]
-        public IEnumerable<Card> Post()  //[FromBody] Card obj
+        //public IEnumerable<Card> Post()  //[FromBody] Card obj
+        public async Task<IEnumerable<Card>> Post()
         {
-            var card = new Card { Id = "3", Name = "Card 3", Stars = 3, Description = "This is Card Number.3", Type = "High", Price = 300 };
-            try
-            {
-                unitOfWork.CreateTransaction();
-                unitOfWork.GetCardRepository().Add(card);
-                unitOfWork.Save();
-                unitOfWork.Commit();
-                return unitOfWork.GetCardRepository().GetAll();
-            }
-            catch (Exception e)
-            {
-                unitOfWork.Rollback();
-                throw e;
-            }
+            //var card = new Card { Id = "3", Name = "Card 3", Stars = 3, Description = "This is Card Number.3", Type = "High", Price = 300 };
+            //try
+            //{
+            //    unitOfWork.CreateTransaction();
+            //    unitOfWork.GetCardRepository().Add(card);
+            //    unitOfWork.Save();
+            //    unitOfWork.Commit();
+            //    return unitOfWork.GetCardRepository().GetAll();
+            //}
+            //catch (Exception e)
+            //{
+            //    unitOfWork.Rollback();
+            //    throw e;
+            //}
+            await mediator.Send(new CreateCardCommand { Id = "10", Name = "Card10", Stars = 0, Description = "This is Card.10", Type = "???", Price = 1000 });
+            return await mediator.Send(new GetAllCardsQuery());
         }
 
-        // PUT api/<CardController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, string value)
+        // Patch api/<CardController>/5
+        [HttpPatch("{id}")]
+        public void Patch(int id, string value)
         {
             //var card = this.cardRepository.GetById(id.ToString());
             //card.Description = value;
@@ -81,6 +87,7 @@ namespace SpecialDP.Controllers
             //var card = this.cardRepository.GetById(2.ToString());
             //this.cardRepository.Delete(card);
             //return Ok(this.cardRepository.GetAll());
+
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.EntityFrameworkCore;
 using SpecialDP.Models;
 
 namespace SpecialDP.Data.Features.Queries
@@ -18,7 +19,11 @@ namespace SpecialDP.Data.Features.Queries
             public async Task<IEnumerable<Card>> Handle(GetAllCardsQuery request, CancellationToken cancellationToken)
             {
 
-                var result = this.context.Set<Card>().ToList();
+                var result = await this.context.Set<Card>().ToListAsync();
+                if (result == null)
+                {
+                    return null;
+                }
                 return result;
             }
         }
