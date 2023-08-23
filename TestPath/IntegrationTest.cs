@@ -22,12 +22,14 @@ namespace TestPath
         {
             //Arrange
             var request = new HttpRequestMessage(HttpMethod.Get, "/api/Card");
+
             //Act
             var response = await client.SendAsync(request);
             //Assert
             response.EnsureSuccessStatusCode();
             //Assert.Equal(HttpStatusCode.OK, response.StatusCode);
             response.StatusCode.Should().Be(HttpStatusCode.OK);
+            response.Should().BeSuccessful();
         }
 
         [Fact]
