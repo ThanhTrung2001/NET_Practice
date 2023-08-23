@@ -29,22 +29,26 @@ namespace SpecialDP.Data.UnitOfWork
         public void CreateTransaction()
         {
             transaction = context.Database.BeginTransaction();
+            Console.WriteLine("Begin Transaction");
         }
 
         public void Commit()
         {
             try
             {
+                Console.WriteLine("Commit Transaction");
                 transaction.Commit();
 
             }
             catch (Exception exception)
             {
+                Console.WriteLine("Fail.Rollback Transaction");
                 transaction.Rollback();
                 throw exception;
             }
             finally
             {
+                Console.WriteLine("Dispose Transaction");
                 transaction.Dispose();
                 transaction = null;
             }
@@ -65,6 +69,7 @@ namespace SpecialDP.Data.UnitOfWork
 
         public void Save()
         {
+            Console.WriteLine("Save Changes to Transaction");
             context.SaveChanges();
         }
     }
