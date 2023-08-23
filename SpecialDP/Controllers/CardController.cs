@@ -35,6 +35,7 @@ namespace SpecialDP.Controllers
             //{
 
             //}
+            Console.WriteLine("123");
             return this.cardRepository.GetAll();
             //return unitOfWork.GetCardRepository().GetAll();
             //return await mediator.Send(new GetAllCardsQuery());
