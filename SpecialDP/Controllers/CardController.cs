@@ -31,6 +31,10 @@ namespace SpecialDP.Controllers
         //public IEnumerable<Card> Get()
         public async Task<IEnumerable<Card>> Get()
         {
+            //using(TransactionScope scope = new TransactionScope())
+            //{
+
+            //}
             return this.cardRepository.GetAll();
             //return unitOfWork.GetCardRepository().GetAll();
             //return await mediator.Send(new GetAllCardsQuery());
