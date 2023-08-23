@@ -12,4 +12,11 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="SOLID\Liskov\" />
+    <Folder Include="SOLID\Interface\" />
+    <Folder Include="SOLID\DI\" />
+    <Folder Include="SOLID\OpenClose\" />
+  </ItemGroup>
+
 </Project>

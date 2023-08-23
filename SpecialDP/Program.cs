@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using SpecialDP.Data;
+using SpecialDP.Data.Repository;
+using SpecialDP.Data.Repository.Interface;
 using SpecialDP.Data.UnitOfWork;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,8 +10,10 @@ var builder = WebApplication.CreateBuilder(args);
 //Database
 builder.Services.AddDbContextPool<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-//builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-//builder.Services.AddScoped(typeof(ICardRepository), typeof(CardRepository));
+//when use UnitOfwork, nomore register Repository DI
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+builder.Services.AddScoped(typeof(ICardRepository), typeof(CardRepository));
+//
 builder.Services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
 //register MediatR
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));

@@ -5,23 +5,23 @@ namespace SpecialDP.Data.Repository
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
-        protected DbContext dbContext;
-        protected DbSet<T> dbSet;
-
-        public GenericRepository(DbContext context)
-        {
-            this.dbContext = context;
-            dbSet = context.Set<T>();
-        }
-
-        //protected readonly ApplicationDbContext dbContext;
+        //protected DbContext dbContext;
         //protected DbSet<T> dbSet;
 
-        //public GenericRepository(ApplicationDbContext context)
+        //public GenericRepository(DbContext context)
         //{
         //    this.dbContext = context;
         //    dbSet = context.Set<T>();
         //}
+
+        protected readonly ApplicationDbContext dbContext;
+        protected DbSet<T> dbSet;
+
+        public GenericRepository(ApplicationDbContext context)
+        {
+            this.dbContext = context;
+            dbSet = context.Set<T>();
+        }
 
         public IEnumerable<T> GetAll()
         {
