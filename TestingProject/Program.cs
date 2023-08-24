@@ -2,7 +2,12 @@ using TestingProject.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Logging.ClearProviders();
-builder.Logging.AddConsole();
+builder.Logging.AddConsole(options =>
+{
+    options.IncludeScopes = true;
+    options.TimestampFormat = "HH:mm:ss ";
+});
+
 
 // Add services to the container.
 //builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
@@ -10,12 +15,12 @@ builder.Logging.AddConsole();
 //  //connectionString
 //  builder.Configuration.GetConnectionString("DefaultConnection")
 //  ));
-
+builder.Services.AddScoped(typeof(ICardRepository), typeof(CardRepository));
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped(typeof(ICardRepository), typeof(CardRepository));
+
 
 var app = builder.Build();
 

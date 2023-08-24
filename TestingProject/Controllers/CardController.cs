@@ -10,19 +10,19 @@ namespace TestingProject.Controllers
     [ApiController]
     public class CardController : ControllerBase
     {
-        private readonly CardRepository cardRepository;
+        private readonly ICardRepository cardRepository;
         private readonly ILogger<CardController> _logger;
 
-        public CardController(ILogger<CardController> logger)
+        public CardController(ILogger<CardController> logger, ICardRepository cardRepository)
         {
-            this.cardRepository = new CardRepository();
+            this.cardRepository = cardRepository;
             _logger = logger;
         }
         // GET: api/<CardController>
         [HttpGet]
         public IEnumerable<Card> Get()
         {
-            var cards = cardRepository.GetCards().ToList();
+            var cards = cardRepository.GetCards();
             _logger.LogInformation("log");
             return cards;
         }

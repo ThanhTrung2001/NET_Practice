@@ -20,7 +20,7 @@ namespace TestingProject.Data
 
         public IEnumerable<Card> GetCards()
         {
-            return cards;
+            return cards.ToList();
         }
 
         public Card GetCardById(string id)

@@ -30,7 +30,7 @@ namespace TestPath
             //Act
             var card = repository.GetCardById($"{i}");
             //Assert
-            Assert.NotNull(card);
+            Assert.Null(card);
             Assert.Equal(expectResult.Name, card.Name);
             Assert.Equal(expectResult.Stars, card.Stars);
             Assert.Equal(expectResult.Price, card.Price);
@@ -61,7 +61,7 @@ namespace TestPath
             //Act
             var card = repository.GetCards();
             //Assert
-            card.Should().NotBeNull().And.HaveCount(5);
+            card.Should().BeNull().And.HaveCount(5);
         }
     }
 }
